@@ -1,0 +1,448 @@
+.base__container
+{
+    padding-left: 74px;
+    padding-right: 32px;
+}
+.page-container
+{
+    padding-top: 88px
+}
+.bold
+{
+    font-weight: bold;
+}
+
+/* Хедер */
+.page-header
+{
+    border-bottom: 1px solid #eaeaea;
+    background: #fff;
+    -webkit-box-shadow: 0 0 8px rgb(0 0 0 / 10%);
+    box-shadow: 0 0 8px rgb(0 0 0 / 10%);
+    margin: 0;
+    padding: 8px 74px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1001;
+    font-size: 0;
+}
+.page-header__title
+{
+    display: flex;
+    flex-direction: row;
+    font-size: 1rem;
+    line-height: 1.4;
+    table-layout: fixed;
+    height: 63px;
+}
+.p-title__image
+{
+    width: 68px;
+    height: 100%;
+    margin-right: 10px;
+    border: 1px solid #eaeaea;
+
+}
+.p-title__image img
+{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+.p-title__name
+{
+    font-size: 1.25rem;
+}
+.p-title__desc
+{
+    display: flex;
+    flex-direction: row;
+    padding-top: 5px;
+    font-size: 13px;
+    color: #a6a6a6;
+}
+.p-title__desc-item
+{
+    margin-right: 54px;
+}
+.p-title__desc-item:last-child
+{
+    margin-right: 0;
+}
+
+/* Фильры */
+
+.filter
+{
+    padding: 10px 0;
+}
+.filter__wrap
+{
+    display: flex;
+    flex-direction: row;
+    column-gap: 35px;
+}
+.filter__item
+{
+    height: 62px;
+}
+.filter-item__label
+{
+    color: #a6a6a6;
+    font-size: 11px;
+    line-height: 15px;
+    font-weight: 400;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+    -webkit-transition: color ease-in-out .15s;
+    transition: color ease-in-out .15s;
+}
+.filter-item__buttons
+{
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5rem;
+}
+.filter-item__check
+{
+    display: none;
+}
+.filter-item__btn
+{
+    
+    height: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 18px 12px;
+    border: 1px solid #e9e9e9;
+    border-radius: 3px;
+    font-size: 15px;
+    line-height: 140%;
+    text-align: center;
+    color: #333;
+    background-color: #fff;
+    cursor: pointer;
+}
+.filter-item__btn:hover
+{
+    border-color: #3884d2;
+}
+.filter-item__btn:active
+{
+    background-color: #ff343a;
+    border-color: #ff343a;
+}
+.filter-item__check:checked + .filter-item__btn
+{
+    border-color: #3884d2;
+    background-color: #3884d2;
+    color: #fff;
+}
+.filter-item__range-container
+{
+    display: flex;
+    flex-direction: row;
+    column-gap: 0.5rem;
+}
+.range_price
+{
+    width: 272px;
+}
+.range_square
+{
+    width: 190px;
+}
+.filter-item__range-wrap
+{
+    position: relative;
+    width: 50%;
+}
+.filter-item__range
+{
+    padding: 6px 12px;
+    border: 1px solid #e9e9e9;
+    border-radius: 3px;
+    width: 100%;
+    padding-left: 35px;
+}
+.filter-item__range:focus, .filter-item__range:hover {
+    border-color: rgba(56,132,210,.5);
+    box-shadow: none;
+}
+.filter-item__range-label
+{
+    position: absolute;
+    padding: 7px 12px;
+    color: #a6a6a6;
+    line-height: 22px;
+    left: 0;
+    pointer-events: none;
+}
+
+.filter__result
+{
+    font-size: 13px;
+    margin: 10px 0;
+}
+
+/* Шахматка верх */
+.content__topper
+{
+    margin: 0 0 10px;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    background: #fbfbfb;
+}
+.content-topper__legend
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 25px;
+}
+.legend__item
+{
+    color: #a6a6a6;
+    font-size: 13px;
+}
+.legend-item__color
+{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    line-height: 14px;
+    vertical-align: middle;
+    margin-right: 6px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+}
+.legend-item__color-free
+{
+    background-color: #63cba5;
+}
+.legend-item__color-reserved
+{
+    background-color: #ffb400;
+}
+.legend-item__color-sold
+{
+    background-color: #a6a6a6
+}
+.legend-item__color-disabled
+{
+    background-color: #eaeaea;
+}
+.content-topper__switch input[type=checkbox]
+{
+    opacity: 0;
+    position: absolute;
+}
+.content-topper__switch input[type=checkbox]:checked+label, .content-topper__switch label:hover {
+    color: #333;
+}
+.content-topper__switch label
+{
+    margin: 0;
+    color: #a6a6a6;
+    font-size: 13px;
+    font-weight: 400;
+    padding-left: 48px;
+    cursor: pointer;
+    display: inline-block;
+    -webkit-transition: color .15s ease-in-out;
+    transition: color .15s ease-in-out;
+    position: relative;
+}
+.content-topper__switch label::before
+{
+    display: block;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    position: absolute;
+    left: 2px;
+    z-index: 2;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 1px 2px rgb(0 0 0 / 15%);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 15%);
+    -webkit-transition: left .2s ease-in-out;
+    transition: left .2s ease-in-out;
+    top: 1px;
+    content: '';
+}
+.content-topper__switch label::after
+{
+    content: '';
+    display: block;
+    border: none;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    width: 38px;
+    height: 22px;
+    -webkit-transition: background-color .2s ease-in-out;
+    transition: background-color .2s ease-in-out;
+    position: absolute;
+    top: -1px;
+    left: 0;
+    background-color: #eaeaea;
+}
+.content-topper__switch input[type=checkbox]:checked+label:before {
+    left: 19px;
+}
+.content-topper__switch input[type=checkbox]:checked+label:after {
+    border: none;
+    background-image: none;
+    background-color: #3884d2;
+}
+
+/* Шахматка */
+.content__overview
+{
+    padding: 0 110px 70px 28px;
+    position: relative;
+}
+
+.overview__axis-y, .overview__axis-x {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #a6a6a6;
+    position: absolute;
+    z-index: 1;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.overview__axis-y
+{
+    left: 0;
+    top: 40px;
+    bottom: 0;
+}
+.overview__axis-x {
+    bottom: 0;
+    left: 0;
+    right: 84px;
+    padding-bottom: 30px;
+    position: fixed;
+    z-index: 1030;
+    background: -webkit-linear-gradient(top,rgba(255,255,255,0) 0,#fff 16px,#fff 100%);
+    background: linear-gradient(to bottom,rgba(255,255,255,0) 0,#fff 16px,#fff 100%);
+}
+.overview__axis-y-text
+{
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: 26px;
+    left: -134px;
+    white-space: nowrap;
+    width: 200px;
+    -webkit-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg)
+}
+.overview__floors
+{
+    width: 28px;
+    position: relative;
+    z-index: 2;
+    margin-top: 40px;
+}
+.overview__floors-left
+{
+    float: left;
+    margin-left: -30px;
+}
+.overview__floors-right
+{
+    float: right;
+    margin-right: -28px;
+}
+.floors__cell
+{
+    width: 28px;
+    height: 28px;
+    margin: 2px 0 2px 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a6a6a6;
+    font-size: 13px;
+    line-height: 24px;
+}
+.overview__overflow
+{
+    overflow: hidden;
+    padding-top: 1px;
+    margin-bottom: -10px;
+    position: relative;
+    left: -6px;
+    
+    
+}
+.overview__grid-under
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-top: 40px;
+    padding-top: 1px;
+    
+}
+.overviev-grid__inner
+{
+    white-space: nowrap;
+    padding-bottom: 10px;
+    padding-top: 40px;
+    user-select: none;
+}
+.overviev-grid__block
+{
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    margin-bottom: 1px;
+    min-height: 32px;
+    margin-left: 8px;
+}
+.overviev-grid__block:hover
+{
+    box-shadow: 0 -1px 0 #eaeaea, 0 1px 0 #eaeaea;
+    background: #fbfbfb;
+}
+.grid-block__section
+{
+    display: flex;
+    flex-direction: row;
+    margin: 0 16px 0 0;
+    position: relative;
+}
+.grid-block__title
+{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    font-size: 13px;
+    color: #a6a6a6;
+    height: 36px;
+    padding: 6px 0 0 6px;
+}
+.section-floor__cell
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    margin: 2px 0 2px 4px;
+    height: 28px;
+    cursor: pointer;
+    width: 28px;
+    background-color: #63cba5;
+    color: #fff;
+}
