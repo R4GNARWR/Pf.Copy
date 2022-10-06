@@ -1,3 +1,8 @@
+html
+{
+    overflow: scroll !important;
+    scroll-behavior:unset !important;
+}
 .base__container
 {
     padding-left: 74px;
@@ -327,11 +332,28 @@
     left: 0;
     right: 84px;
     padding-bottom: 30px;
+}
+
+body:not([class*=cancel-fixed-panel]) .overview__axis-x {
+    height: 82px;
     position: fixed;
-    z-index: 1030;
+    background: #fff;
     background: -webkit-linear-gradient(top,rgba(255,255,255,0) 0,#fff 16px,#fff 100%);
     background: linear-gradient(to bottom,rgba(255,255,255,0) 0,#fff 16px,#fff 100%);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding-right: 32px;
 }
+body:not([class*=cancel-fixed-panel]) .overview__axis-x .overview__axis-x-text {
+    position: absolute;
+    bottom: 30px;
+    left: 74px;
+    right: 116px;
+    text-align: center;
+}
+
 .overview__axis-y-text
 {
     display: block;
@@ -445,4 +467,39 @@
     width: 28px;
     background-color: #63cba5;
     color: #fff;
+}
+.nicescroll-rails-hr {
+	margin-left: 6px!important;
+    height: 20px!important;
+    background: 0 0!important;
+    cursor: pointer;
+    z-index: 10!important;
+    height: 2px!important;
+    background-color: #eaeaea!important;
+    
+}
+body:not([class*=cancel-fixed-panel]) .nicescroll-rails-hr {
+	position: fixed!important;
+    z-index: 11!important;
+    top: auto!important;
+    bottom: 55px!important;
+}
+.nicescroll__board.nicescroll-rails-hr .nicescroll-cursors {
+    height: 20px!important;
+    background: 0 0!important;
+    -webkit-transition: none;
+    transition: none;
+    top: 0!important;
+    border: none!important;
+}
+.nicescroll-rails-hr .nicescroll-cursors {
+    height: 8px!important;
+    top: -3px!important;
+}
+.nicescroll-cursors:hover {
+    background: #ff343a!important;
+}
+.nicescroll-cursors {
+    background: #3884d2!important;
+    cursor: pointer!important;
 }
