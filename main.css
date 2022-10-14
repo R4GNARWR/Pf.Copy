@@ -601,6 +601,13 @@ body:not([class*=cancel-fixed-panel]) .nicescroll-rails-hr {
     overflow: scroll;
     padding: 18px 32px 25px;
 }
+@media (max-width: 576px)
+{
+    #sideMenu
+    {
+        width: 100%;
+    }
+}
 .sideMenu__label
 {
     position: relative;

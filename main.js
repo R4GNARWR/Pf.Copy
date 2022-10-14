@@ -51,21 +51,25 @@ function insertData(block, btn)
     $('#flatJk').html($dataJk);
     $('#flatRooms').html($dataRooms);
     $('#flatSq').html($dataSq);
-    switch($dataCond)
+    if ($('#flatCond').html() == '')
     {
-        case('Свободная'):
-            $('#flatCond').append($condFree); 
-            break;
-        case('Забронированная'):
-            $('#flatCond').append($condBooked);   
-            break;
-        case('Проданная'):
-            $('#flatCond').append($condSelled);   
-            break;
-        case('Недоступна'):
-            $('#flatCond').append($condDis);  
-            break;
+        switch($dataCond)
+        {
+            case('Свободная'):
+                $('#flatCond').append($condFree); 
+                break;
+            case('Забронированная'):
+                $('#flatCond').append($condBooked);   
+                break;
+            case('Проданная'):
+                $('#flatCond').append($condSelled);   
+                break;
+            case('Недоступна'):
+                $('#flatCond').append($condDis);  
+                break;
+        }
     }
+
 }
 
 $(document).ready(function() {
