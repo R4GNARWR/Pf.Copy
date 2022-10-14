@@ -12,14 +12,14 @@
 <body>
     <section class="page-header">
         <div class="page-header__title">
-            <div class="p-title__image">
+            <div class="p-title__image d-md-block d-none">
                 <img src="logo-building.png" alt="">
             </div>
             <div class="p-title__text">
                 <div class="p-title__name">Каретная 51</div>
                 <div class="p-title__desc">
                     <div class="p-title__desc-item">Уфа, Республика Башкортостан, Аксакова, 51</div>
-                    <div class="p-title__desc-item"> <span>N помещений</span> <span>–&nbsp;от&nbsp;2 162 500&nbsp; ₽</span> </div>
+                    <div class="p-title__desc-item"> <span>1116 помещений</span> <span>–&nbsp;от&nbsp;2 162 500&nbsp; ₽</span> </div>
                 </div>
             </div>
         </div>
@@ -27,598 +27,161 @@
 <section class="page-container">
 
 
-    <section class="filter">
-        <div class="base__container">
-            <div class="filter__wrap">
-                <div class="filter__item">
-                    <div class="filter-item__label">кол-во комнат</div>
-                    <div class="filter-item__buttons">
-                        <div>
-                            <input type="checkbox" class="filter-item__check" name="rooms" id="st" value="st">
-                            <label class="btn filter-item__btn" for="st">Студия</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" class="filter-item__check" name="rooms" id="1" value="1">
-                            <label class="btn filter-item__btn" for="1">1</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" class="filter-item__check" name="rooms" id="2" value="2">
-                            <label class="btn filter-item__btn" for="2">2</label>
-                        </div>
-                        <div>
-                            <input type="checkbox" class="filter-item__check" name="rooms" id="3" value="3">
-                            <label class="btn filter-item__btn" for="3">3</label>
-                        </div>
+<section class="filter">
+    <div class="base__container">
+        <div class="filter__wrap">
+            <div class="filter__item">
+                <div class="filter-item__label">кол-во комнат</div>
+                <div class="filter-item__buttons">
+                    <div>
+                        <input type="checkbox" class="filter-item__check" name="rooms" id="st" value="st">
+                        <label class="btn filter-item__btn" for="st">Студия</label>
                     </div>
-                </div>
-                <div class="filter__item">
-                    <div class="filter-item__label">Стоимость, ₽</div>
-                    <div class="filter-item__buttons">
-                        <div class="filter-item__range-container range_price">
-                            <div class="filter-item__range-wrap">
-                                <div class="filter-item__range-label">от</div>
-                                <input type="text" class="form-control filter-item__range">
-                            </div>
-                            
-                            <div class="filter-item__range-wrap">
-                                <div class="filter-item__range-label">от</div>
-                                <input type="text" class="form-control filter-item__range">
-                            </div>
-                        </div>
+                    <div>
+                        <input type="checkbox" class="filter-item__check" name="rooms" id="1" value="1">
+                        <label class="btn filter-item__btn" for="1">1</label>
                     </div>
-                </div>
-                <div class="filter__item">
-                    <div class="filter-item__label">площадь, м<sup>2</sup></div>
-                    <div class="filter-item__buttons">
-                        <div class="filter-item__range-container range_square">
-                            <div class="filter-item__range-wrap">
-                                <div class="filter-item__range-label">от</div>
-                                <input type="text" class="form-control filter-item__range">
-                            </div>
-                            
-                            <div class="filter-item__range-wrap">
-                                <div class="filter-item__range-label">от</div>
-                                <input type="text" class="form-control filter-item__range">
-                            </div>
-                        </div>
+                    <div>
+                        <input type="checkbox" class="filter-item__check" name="rooms" id="2" value="2">
+                        <label class="btn filter-item__btn" for="2">2</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" class="filter-item__check" name="rooms" id="3" value="3">
+                        <label class="btn filter-item__btn" for="3">3</label>
                     </div>
                 </div>
             </div>
-
-            <div class="filter__result">
-                Найдено  <span class="bold">N</span> помещений. Из них свободно: <span class="bold">N</span>.
-            </div>
-        </div>
-    </section>
-
-    <section class="page__content">
-        <div class="base__container">
-            <div class="content__topper">
-                <div class="content-topper__legend">
-                    <div class="legend__item">
-                        <span class="legend-item__color legend-item__color-free"></span>
-                        Свободные
-                    </div>
-                    <div class="legend__item">
-                        <span class="legend-item__color legend-item__color-reserved"></span>
-                        Забронированные
-                    </div>
-                    <div class="legend__item">
-                        <span class="legend-item__color legend-item__color-sold"></span>
-                        Проданные
-                    </div>
-                    <div class="legend__item">
-                        <span class="legend-item__color legend-item__color-disabled"></span>
-                        Недоступные
-                    </div>
-                </div>
-                <div class="content-topper__switch">
-                    <input type="checkbox" name="" id="available">
-                    <label for="available">Только свободные</label>
-                </div>
-            </div>
-
-            <div class="content__overview">
-
-                <div class="overview__axis-y">
-                    <div class="overview__axis-y-text">
-                        Этажи
-                    </div>
-                </div>
-
-                <div class="overview__axis-x fixed-bottom">
-                    <div class="overview__axis-x-text">
-                        Квартир
-                    </div>
-                </div>
-
-                <div class="overview__floors overview__floors-left">
-                    <div class="floors__cell">1</div>
-                </div>
-                <div class="overview__floors overview__floors-right">
-                    <div class="floors__cell">1</div>
-                </div>
-                <div class="overview__overflow " >
-                    <div class="overview__grid">
-                        <div class="overviev-grid__inner">
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="grid-block__title">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-
-
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div> 
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-                            <div class="overviev-grid__block">
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                    <div class="section-floor__cell">1</div>
-                                </div>
-                                <div class="grid-block__section">
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                    <div class="section-floor__cell">2</div>
-                                </div>
-                            </div>
-
+            <div class="filter__item">
+                <div class="filter-item__label">Стоимость, ₽</div>
+                <div class="filter-item__buttons">
+                    <div class="filter-item__range-container range_price">
+                        <div class="filter-item__range-wrap">
+                            <div class="filter-item__range-label">от</div>
+                            <input type="text" class="form-control filter-item__range">
                         </div>
                         
+                        <div class="filter-item__range-wrap">
+                            <div class="filter-item__range-label">от</div>
+                            <input type="text" class="form-control filter-item__range">
+                        </div>
                     </div>
                 </div>
-
+            </div>
+            <div class="filter__item">
+                <div class="filter-item__label">площадь, м<sup>2</sup></div>
+                <div class="filter-item__buttons">
+                    <div class="filter-item__range-container range_square">
+                        <div class="filter-item__range-wrap">
+                            <div class="filter-item__range-label">от</div>
+                            <input type="text" class="form-control filter-item__range">
+                        </div>
+                        
+                        <div class="filter-item__range-wrap">
+                            <div class="filter-item__range-label">от</div>
+                            <input type="text" class="form-control filter-item__range">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-    </section>
+        <div class="filter__result">
+            Найдено  <span class="bold">N</span> помещений. Из них свободно: <span class="bold">N</span>.
+        </div>
+    </div>
+</section>
+
+<section class="page__content">
+    <div class="base__container">
+        <div class="content__topper">
+            <div class="content-topper__switch d-md-none w-100">
+                <input type="checkbox" name="" id="available">
+                <label for="available">Только свободные</label>
+            </div>
+            <div class="content-topper__legend">
+                <div class="legend__item">
+                    <span class="legend-item__color legend-item__color-free"></span>
+                    Свободные
+                </div>
+                <div class="legend__item">
+                    <span class="legend-item__color legend-item__color-reserved"></span>
+                    Забронированные
+                </div>
+                <div class="legend__item">
+                    <span class="legend-item__color legend-item__color-sold"></span>
+                    Проданные
+                </div>
+                <div class="legend__item">
+                    <span class="legend-item__color legend-item__color-disabled"></span>
+                    Недоступные
+                </div>
+            </div>
+            <div class="content-topper__switch d-md-block d-none">
+                <input type="checkbox" name="" id="available">
+                <label for="available">Только свободные</label>
+            </div>
+        </div>
+
+        <div class="content__overview">
+
+            <div class="overview__axis-y">
+                <div class="overview__axis-y-text">
+                    Этажи
+                </div>
+            </div>
+
+            <div class="overview__axis-x fixed-bottom">
+                <div class="overview__axis-x-text">
+                    Квартир
+                </div>
+            </div>
+
+            <div class="overview__floors overview__floors-left">
+                <div class="floors__cell">1</div>
+            </div>
+            <div class="overview__floors overview__floors-right">
+                <div class="floors__cell">1</div>
+            </div>
+            <div class="overview__overflow " >
+                <div class="overview__grid">
+                    <div class="overviev-grid__inner">
+                        <div class="overviev-grid__block">
+                            <div class="grid-block__section">
+                                <div class="grid-block__title">1</div>
+                                <div class="section-floor__cell">1</div>
+                                <div class="section-floor__cell"
+                                data-floor="1"
+                                data-flat-number="2"
+                                data-porch="2"
+                                data-price="5000000"
+                                data-price-sq="100000"
+                                data-house="Каретная 51"
+                                data-jk="Каретная 51"
+                                data-rooms="1"
+                                data-sq="45.33">1</div>
+                            </div>
+                            <div class="grid-block__section">
+                                <div class="section-floor__cell">2</div>
+                                <div class="section-floor__cell">2</div>
+                                <div class="section-floor__cell">2</div>
+                                <div class="section-floor__cell">2</div>
+                                <div class="section-floor__cell">2</div>
+                            </div>
+                        </div>
+                        <div class="overviev-grid__block">
+                            <div class="grid-block__section">
+                                <div class="section-floor__cell">1</div>
+                                <div class="section-floor__cell">1</div>
+                                <div class="section-floor__cell">1</div>
+                                <div class="section-floor__cell">1</div>
+                                <div class="section-floor__cell">1</div>
+                            </div>
+                        </div>      
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
 
 
 </section>
@@ -635,12 +198,11 @@ $(document).ready(function() {
 
     $(".overview__grid").niceScroll({
         cursorborder:"",cursorcolor:"#00F",
-        oneaxismousemode: false,
-        touchbehavior: false,
+        emulatetouch: true,    
         autohidemode: false,
-        preventmultitouchscrolling: false,
+        preventmultitouchscrolling: true,
         cursordragontouch: true,
-        cursordragspeed: '.1',
+        cursordragspeed: '0.3',
     }); // First scrollable DIV
 
 });

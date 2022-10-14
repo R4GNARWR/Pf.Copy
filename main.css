@@ -8,6 +8,13 @@ html
     padding-left: 74px;
     padding-right: 32px;
 }
+@media (max-width:768px)
+{
+    .base__container
+    {
+        padding: 0 15px;
+    }
+}
 .page-container
 {
     padding-top: 88px
@@ -37,6 +44,7 @@ html
 {
     display: flex;
     flex-direction: row;
+    align-items: center;
     font-size: 1rem;
     line-height: 1.4;
     table-layout: fixed;
@@ -55,6 +63,13 @@ html
     height: 100%;
     width: 100%;
     object-fit: contain;
+}
+.p-title__text
+{
+    
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
 }
 .p-title__name
 {
@@ -77,6 +92,26 @@ html
     margin-right: 0;
 }
 
+@media (max-width:768px)
+{
+    .page-header__title
+    {
+        height: 55px;
+    }
+    .p-title__text
+    {
+        flex-direction: row;
+        align-items: center;
+    }
+    .page-header
+    {
+        padding: 0 15px;
+    }
+    .p-title__desc
+    {
+        display: none;
+    }
+}
 /* Фильры */
 
 .filter
@@ -192,6 +227,15 @@ html
     font-size: 13px;
     margin: 10px 0;
 }
+@media (max-width:768px)
+{
+    .filter__wrap
+    {
+        flex-direction: column;
+        row-gap: 20px;
+    }
+
+}
 
 /* Шахматка верх */
 .content__topper
@@ -204,8 +248,8 @@ html
 }
 .content-topper__legend
 {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
     align-items: center;
     column-gap: 25px;
 }
@@ -500,6 +544,43 @@ body:not([class*=cancel-fixed-panel]) .nicescroll-rails-hr {
     background: #ff343a!important;
 }
 .nicescroll-cursors {
-    background: #3884d1!important;
+    background: #3884d2!important;
     cursor: pointer!important;
+}
+
+@media (max-width:768px)
+{
+    .content__overview
+    {
+        padding: 0 0 0 30px;
+    }
+    .overview__floors-right
+    {
+        display: none;
+    }
+
+    .content__topper
+    {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        background: #fbfbfb;
+    }
+    .content-topper__legend
+    {
+        grid-template-columns: repeat(2, auto);
+    }
+    .overview__floors-left
+    {
+        margin-top: 43px;
+        -webkit-box-shadow: 2px 0 8px rgb(0 0 0 / 20%);
+        box-shadow: 2px 0 8px rgb(0 0 0 / 20%);
+    }
+    .floors__cell
+    {
+        margin: 0;
+    }
+    body:not([class*=cancel-fixed-panel]) .nicescroll__board-fixed.nicescroll-rails-hr {
+        bottom: 0!important;
+    }
 }
