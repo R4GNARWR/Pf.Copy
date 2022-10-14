@@ -17,7 +17,8 @@ html
 }
 .page-container
 {
-    padding-top: 88px
+    padding-top: 88px;
+    position:relative;
 }
 .bold
 {
@@ -584,3 +585,104 @@ body:not([class*=cancel-fixed-panel]) .nicescroll-rails-hr {
         bottom: 0!important;
     }
 }
+
+/* Левое меню */
+#sideMenu
+{
+    width: 420px;
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 98px;
+    height: calc(100vh - 80px);
+    background: #fbfbfb;
+    box-shadow: inset 1px 0 0 0 #eaeaea;
+    z-index: 500;
+    overflow: scroll;
+    padding: 18px 32px 25px;
+}
+.sideMenu__label
+{
+    position: relative;
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 0 0 20px;
+}
+.sideMenu__price-wrap
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.sideMenu__price-text
+{
+    color: #a6a6a6;
+    line-height: 18px;
+}
+.sideMenu__price
+{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 20px;
+    line-height: 28px;
+    white-space: nowrap;
+    font-weight: 700;
+}
+.sideMenu__price-sq
+{
+    font-size: 15px;
+    color: #a6a6a6;
+}
+.sideMenu__desc
+{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.sideMenu__desc-name
+{
+    text-align: start;
+    line-height: 1.4;
+    vertical-align: top;
+    border-top: 1px solid #eaeaea;
+    color: #a6a6a6;
+    font-size: 15px;
+    padding: 5px;
+}
+.sideMenu__desc-val
+{
+    text-align: end;
+    line-height: 1.4;
+    vertical-align: top;
+    border-top: 1px solid #eaeaea;
+    font-size: 15px;
+    padding: 5px;
+}
+.sideMenu__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 28px;
+    height: 28px;
+    opacity: 0.3;
+  }
+  .sideMenu__close:hover {
+    opacity: 1;
+  }
+  .sideMenu__close:before, .sideMenu__close:after {
+    position: absolute;
+    left: 15px;
+    content: ' ';
+    height: 33px;
+    width: 2px;
+    background-color: #333;
+  }
+  .sideMenu__close:before {
+    transform: rotate(45deg);
+  }
+  .sideMenu__close:after {
+    transform: rotate(-45deg);
+  }
+  

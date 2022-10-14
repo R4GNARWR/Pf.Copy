@@ -25,188 +25,201 @@
         </div>
     </section>
 <section class="page-container">
+    <section id="sideMenu">
+        
+        <div class="sideMenu__label">
+            Квартира
+            <span class="sideMenu__close"></span>
+        </div>
+        <div class="sideMenu_legend">
+            <div class="legend__item" id="flatCond">
 
-
-<section class="filter">
-    <div class="base__container">
-        <div class="filter__wrap">
-            <div class="filter__item">
-                <div class="filter-item__label">кол-во комнат</div>
-                <div class="filter-item__buttons">
-                    <div>
-                        <input type="checkbox" class="filter-item__check" name="rooms" id="st" value="st">
-                        <label class="btn filter-item__btn" for="st">Студия</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="filter-item__check" name="rooms" id="1" value="1">
-                        <label class="btn filter-item__btn" for="1">1</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="filter-item__check" name="rooms" id="2" value="2">
-                        <label class="btn filter-item__btn" for="2">2</label>
-                    </div>
-                    <div>
-                        <input type="checkbox" class="filter-item__check" name="rooms" id="3" value="3">
-                        <label class="btn filter-item__btn" for="3">3</label>
-                    </div>
-                </div>
-            </div>
-            <div class="filter__item">
-                <div class="filter-item__label">Стоимость, ₽</div>
-                <div class="filter-item__buttons">
-                    <div class="filter-item__range-container range_price">
-                        <div class="filter-item__range-wrap">
-                            <div class="filter-item__range-label">от</div>
-                            <input type="text" class="form-control filter-item__range">
-                        </div>
-                        
-                        <div class="filter-item__range-wrap">
-                            <div class="filter-item__range-label">от</div>
-                            <input type="text" class="form-control filter-item__range">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="filter__item">
-                <div class="filter-item__label">площадь, м<sup>2</sup></div>
-                <div class="filter-item__buttons">
-                    <div class="filter-item__range-container range_square">
-                        <div class="filter-item__range-wrap">
-                            <div class="filter-item__range-label">от</div>
-                            <input type="text" class="form-control filter-item__range">
-                        </div>
-                        
-                        <div class="filter-item__range-wrap">
-                            <div class="filter-item__range-label">от</div>
-                            <input type="text" class="form-control filter-item__range">
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
-
-        <div class="filter__result">
-            Найдено  <span class="bold">N</span> помещений. Из них свободно: <span class="bold">N</span>.
-        </div>
-    </div>
-</section>
-
-<section class="page__content">
-    <div class="base__container">
-        <div class="content__topper">
-            <div class="content-topper__switch d-md-none w-100">
-                <input type="checkbox" name="" id="available">
-                <label for="available">Только свободные</label>
-            </div>
-            <div class="content-topper__legend">
-                <div class="legend__item">
-                    <span class="legend-item__color legend-item__color-free"></span>
-                    Свободные
-                </div>
-                <div class="legend__item">
-                    <span class="legend-item__color legend-item__color-reserved"></span>
-                    Забронированные
-                </div>
-                <div class="legend__item">
-                    <span class="legend-item__color legend-item__color-sold"></span>
-                    Проданные
-                </div>
-                <div class="legend__item">
-                    <span class="legend-item__color legend-item__color-disabled"></span>
-                    Недоступные
-                </div>
-            </div>
-            <div class="content-topper__switch d-md-block d-none">
-                <input type="checkbox" name="" id="available">
-                <label for="available">Только свободные</label>
+        <div class="sideMenu__price-wrap">
+            <div class="sideMenu__price-text">Стоимость продажи</div>
+            <div class="sideMenu__price" >
+                <div style="display: inline-flex;"><div id="flatPrice">6000000</div>  ₽</div> 
+                <div class="sideMenu__price-sq"> <div id="flatPriceSq" style="display: inline-flex;">40000</div>  ₽/м<sup>2</sup></div> 
             </div>
         </div>
+        <div class="sideMenu__desc">
+            <div class="sideMenu__desc-name">
+                Номер квартиры
+            </div>
+            <div class="sideMenu__desc-val" id="flatNumber"></div>
+            <div class="sideMenu__desc-name">
+                Этаж
+            </div>
+            <div class="sideMenu__desc-val" id="flatFloor"></div>
+            <div class="sideMenu__desc-name">
+                Подьезд
+            </div>
+            <div class="sideMenu__desc-val" id="flatPorch"></div>
+            <div class="sideMenu__desc-name">
+                Название дома
+            </div>
+            <div class="sideMenu__desc-val" id="flatHouse"></div>
+            <div class="sideMenu__desc-name">
+                Название ЖК
+            </div>
+            <div class="sideMenu__desc-val" id="flatJk"></div>
+            <div class="sideMenu__desc-name">
+                Кол-во комнат
+            </div>
+            <div class="sideMenu__desc-val" id="flatRooms"></div>
+            <div class="sideMenu__desc-name">
+                Площадь, м <sub>2</sub>
+            </div>
+            <div class="sideMenu__desc-val" id="flatSq"></div>
+        </div>
+    </section>
 
-        <div class="content__overview">
 
-            <div class="overview__axis-y">
-                <div class="overview__axis-y-text">
-                    Этажи
+    <section class="filter">
+        <div class="base__container">
+            <div class="filter__wrap">
+                <div class="filter__item">
+                    <div class="filter-item__label">кол-во комнат</div>
+                    <div class="filter-item__buttons">
+                        <div>
+                            <input type="checkbox" class="filter-item__check" name="rooms" id="st" value="st">
+                            <label class="btn filter-item__btn" for="st">Студия</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="filter-item__check" name="rooms" id="1" value="1">
+                            <label class="btn filter-item__btn" for="1">1</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="filter-item__check" name="rooms" id="2" value="2">
+                            <label class="btn filter-item__btn" for="2">2</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" class="filter-item__check" name="rooms" id="3" value="3">
+                            <label class="btn filter-item__btn" for="3">3</label>
+                        </div>
+                    </div>
                 </div>
-            </div>
-
-            <div class="overview__axis-x fixed-bottom">
-                <div class="overview__axis-x-text">
-                    Квартир
-                </div>
-            </div>
-
-            <div class="overview__floors overview__floors-left">
-                <div class="floors__cell">1</div>
-            </div>
-            <div class="overview__floors overview__floors-right">
-                <div class="floors__cell">1</div>
-            </div>
-            <div class="overview__overflow " >
-                <div class="overview__grid">
-                    <div class="overviev-grid__inner">
-                        <div class="overviev-grid__block">
-                            <div class="grid-block__section">
-                                <div class="grid-block__title">1</div>
-                                <div class="section-floor__cell">1</div>
-                                <div class="section-floor__cell"
-                                data-floor="1"
-                                data-flat-number="2"
-                                data-porch="2"
-                                data-price="5000000"
-                                data-price-sq="100000"
-                                data-house="Каретная 51"
-                                data-jk="Каретная 51"
-                                data-rooms="1"
-                                data-sq="45.33">1</div>
+                <div class="filter__item">
+                    <div class="filter-item__label">Стоимость, ₽</div>
+                    <div class="filter-item__buttons">
+                        <div class="filter-item__range-container range_price">
+                            <div class="filter-item__range-wrap">
+                                <div class="filter-item__range-label">от</div>
+                                <input type="text" class="form-control filter-item__range">
                             </div>
-                            <div class="grid-block__section">
-                                <div class="section-floor__cell">2</div>
-                                <div class="section-floor__cell">2</div>
-                                <div class="section-floor__cell">2</div>
-                                <div class="section-floor__cell">2</div>
-                                <div class="section-floor__cell">2</div>
+                            
+                            <div class="filter-item__range-wrap">
+                                <div class="filter-item__range-label">от</div>
+                                <input type="text" class="form-control filter-item__range">
                             </div>
                         </div>
-                        <div class="overviev-grid__block">
-                            <div class="grid-block__section">
-                                <div class="section-floor__cell">1</div>
-                                <div class="section-floor__cell">1</div>
-                                <div class="section-floor__cell">1</div>
-                                <div class="section-floor__cell">1</div>
-                                <div class="section-floor__cell">1</div>
+                    </div>
+                </div>
+                <div class="filter__item">
+                    <div class="filter-item__label">площадь, м<sup>2</sup></div>
+                    <div class="filter-item__buttons">
+                        <div class="filter-item__range-container range_square">
+                            <div class="filter-item__range-wrap">
+                                <div class="filter-item__range-label">от</div>
+                                <input type="text" class="form-control filter-item__range">
                             </div>
-                        </div>      
+                            
+                            <div class="filter-item__range-wrap">
+                                <div class="filter-item__range-label">от</div>
+                                <input type="text" class="form-control filter-item__range">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="filter__result">
+                Найдено  <span class="bold">N</span> помещений. Из них свободно: <span class="bold">N</span>.
+            </div>
         </div>
+    </section>
+
+    <section class="page__content">
+        <div class="base__container">
+            <div class="content__topper">
+                <div class="content-topper__switch d-md-none w-100">
+                    <input type="checkbox" name="" id="available">
+                    <label for="available">Только свободные</label>
+                </div>
+                <div class="content-topper__legend">
+                    <div class="legend__item">
+                        <span class="legend-item__color legend-item__color-free"></span>
+                        Свободные
+                    </div>
+                    <div class="legend__item">
+                        <span class="legend-item__color legend-item__color-reserved"></span>
+                        Забронированные
+                    </div>
+                    <div class="legend__item">
+                        <span class="legend-item__color legend-item__color-sold"></span>
+                        Проданные
+                    </div>
+                    <div class="legend__item">
+                        <span class="legend-item__color legend-item__color-disabled"></span>
+                        Недоступные
+                    </div>
+                </div>
+                <div class="content-topper__switch d-md-block d-none">
+                    <input type="checkbox" name="" id="available">
+                    <label for="available">Только свободные</label>
+                </div>
+            </div>
+
+            <div class="content__overview">
+
+                <div class="overview__axis-y">
+                    <div class="overview__axis-y-text">
+                        Этажи
+                    </div>
+                </div>
+
+                <div class="overview__axis-x fixed-bottom">
+                    <div class="overview__axis-x-text">
+                        Квартир
+                    </div>
+                </div>
+
+                <div class="overview__floors overview__floors-left">
+                    <div class="floors__cell">1</div>
+                </div>
+                <div class="overview__floors overview__floors-right">
+                    <div class="floors__cell">1</div>
+                </div>
+                <div class="overview__overflow " >
+                    <div class="overview__grid">
+                        <div class="overviev-grid__inner">
+                            <div class="overviev-grid__block">
+                                <div class="grid-block__section">
+                                    <div class="grid-block__title">1</div>
+                                    <div class="section-floor__cell"
+                                    data-floor="1"
+                                    data-flat-number="2"
+                                    data-porch="2"
+                                    data-price="5000000"
+                                    data-price-sq="100000"
+                                    data-house="Каретная 51"
+                                    data-jk="Каретная 51"
+                                    data-rooms="1"
+                                    data-sq="45.33"
+                                    data-cond="Свободная">1</div>
+                                </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
 </section>
 
-
-</section>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-<script src="https://code.jquery.com/jquery-3.6.1.slim.js" integrity="sha256-tXm+sa1uzsbFnbXt8GJqsgi2Tw+m4BLGDof6eUPjbtk=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js" integrity="sha512-zMfrMAZYAlNClPKjN+JMuslK/B6sPM09BGvrWlW+cymmPmsUT1xJF3P4kxI3lOh9zypakSgWaTpY6vDJY/3Dig==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-<script>
-$(document).ready(function() {
-
-    var nice = $("html").niceScroll();  // The document page (body)
-
-
-    $(".overview__grid").niceScroll({
-        cursorborder:"",cursorcolor:"#00F",
-        emulatetouch: true,    
-        autohidemode: false,
-        preventmultitouchscrolling: true,
-        cursordragontouch: true,
-        cursordragspeed: '0.3',
-    }); // First scrollable DIV
-
-});
-</script>
-
+<script src="main.js"></script>
 </body>
 </html>
