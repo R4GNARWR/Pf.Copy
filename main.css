@@ -286,6 +286,10 @@ html
 {
     background-color: #eaeaea;
 }
+.content-topper__switch
+{
+    display: block;
+}
 .content-topper__switch input[type=checkbox]
 {
     opacity: 0;
@@ -349,6 +353,8 @@ html
     background-image: none;
     background-color: #3884d2;
 }
+
+
 
 /* Шахматка */
 .content__overview
